@@ -45,19 +45,35 @@ console.log("O valor a ser pago é de R$ " + totalComDesconto.toFixed(2));
 
 var salario = parseFloat(prompt("Digite o seu salário atual"));
 var reajuste = 0;
-var aumento = salario * reajuste;
-var salarioNovo = salario + reajuste;
 
 if (salario <= 2800) {
     reajuste = 0.20
 } else if (salario > 2800 && salario <= 7000) {
-    reajuste = 0.15 
-    
+    reajuste = 0.15   
+} else if (salario > 7000 && salario <= 15000) {
+    reajuste = 0.10
+} else {
+    reajuste = 0.05
 }
 
+var aumento = salario * reajuste;
+var salarioNovo = salario + aumento;
+reajuste = reajuste * 100
 
+console.log("O salário antes do reajuste era de R$ " + salario.toFixed(2));
+console.log("O reajuste foi de " + reajuste.toFixed(2) + "%");
+console.log("O valor do aumento foi de R$ " + aumento.toFixed(2));
+console.log("O novo salário é de R$ " + salarioNovo.toFixed(2));
 
 // 3) Faça um algoritmo que imprima o somatório de todos os números entre 1 e um valor digitado pelo usuário. Por exemplo, se o usuário digitar o número 4, o programa deverá calcular o somatório 1 + 2 + 3 + 4 = 10.
 
+var num = parseFloat(prompt("Digite um número"));
+var soma = 0;
+// debugger;
+for (let i = 0; i <= num; i++) {
+    soma += i;
+}
 
-// // 4) Faça um algoritmo que receba 5 números inteiros, armazene-os em um vetor, em seguida, descubra e exiba o maior número. 
+console.log("A soma de 1 até " + num + " é igual a " + soma);
+
+// 4) Faça um algoritmo que receba 5 números inteiros, armazene-os em um vetor, em seguida, descubra e exiba o maior número. 
