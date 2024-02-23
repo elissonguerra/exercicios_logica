@@ -76,4 +76,24 @@ for (let i = 0; i <= num; i++) {
 
 console.log("A soma de 1 até " + num + " é igual a " + soma);
 
-// 4) Faça um algoritmo que receba 5 números inteiros, armazene-os em um vetor, em seguida, descubra e exiba o maior número. 
+// 4) Faça um algoritmo que receba 5 números inteiros, armazene-os em um vetor, em seguida, descubra e exiba o maior número.
+
+var num = [];
+var limiteNumeros = 5;
+
+for (let i = 0; i < limiteNumeros; i++) {
+    num[i] = parseInt(prompt("Digite o " + (i+1) + "º número"));  
+}
+
+var maiorNumero = 0;
+
+for (let i = 0; i < num.length; i++) {
+    if (num[i] > maiorNumero) {
+        maiorNumero = num[i]
+    }
+    
+}
+
+console.log("O maior número digitado é: " + maiorNumero);
+
+
