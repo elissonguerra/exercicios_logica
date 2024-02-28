@@ -19,7 +19,7 @@ tipoCombustivel = tipoCombustivel.toUpperCase();
 var totalSemDesconto = qtdeLitros * precoLitro;
 var totalComDesconto = 0;
 
-if (tipoCombustivel == "A" && qtdeLitros <=20) {
+if (tipoCombustivel == "A" && qtdeLitros <= 20) {
     totalComDesconto = totalSemDesconto - (totalSemDesconto * 0.03);
 } else if (tipoCombustivel == "A" && qtdeLitros > 20) {
     totalComDesconto = totalSemDesconto - (totalSemDesconto * 0.05); 
@@ -69,7 +69,6 @@ console.log("O novo salário é de R$ " + salarioNovo.toFixed(2));
 
 var num = parseFloat(prompt("Digite um número"));
 var soma = 0;
-// debugger;
 for (let i = 0; i <= num; i++) {
     soma += i;
 }
